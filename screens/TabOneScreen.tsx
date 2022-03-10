@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Image, Text, Dimensions } from "react-native";
+import LottieView from 'lottie-react-native';
 
 export default function TabOneScreen() {
   return (
@@ -21,20 +22,22 @@ export default function TabOneScreen() {
         <View
           style={{
             flex: 1,
-            backgroundColor: 'red',
             marginBottom: 10,
             borderRadius: 10,
             overflow: 'hidden'
           }}
         >
-          <Image
+          <LottieView
             style={{
-              height: '100%',
-              width: '100%',
-              resizeMode: 'cover'
+              flex: 1,
             }}
-            source={require('../assets/images/1099445.png')}
+            source={
+              require('../assets/lottie/44376-3d-gamepad-animation.json')
+            }
+            autoPlay={true}
+            loop={true}
           />
+
         </View>
         <View
           style={{
