@@ -1,64 +1,81 @@
-import { Dimensions, Image, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Image, Text, Dimensions } from "react-native";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
-
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function TabOneScreen() {
   return (
-    <View style={{
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
-    }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#273746',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
       <View style={{
-        height: '75%',
+        height: Dimensions.get('screen').height * 0.5,
         width: '80%',
-        backgroundColor: '#E7EEF1',
-        borderRadius: 10,
-        overflow: 'hidden',
+        backgroundColor: 'white',
         padding: 10,
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        flexDirection: 'column'
+        borderRadius: 10
       }}>
-
-        <View style={{ flex: 2, borderRadius: 10, overflow: 'hidden' }}>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: 'red',
+            marginBottom: 10,
+            borderRadius: 10,
+            overflow: 'hidden'
+          }}
+        >
           <Image
-            source={{ uri: 'https://manofmany.com/wp-content/uploads/2021/09/What-is-an-NFT-1.jpg' }}
             style={{
               height: '100%',
               width: '100%',
-              resizeMode: 'cover',
+              resizeMode: 'cover'
             }}
+            source={require('../assets/images/1099445.png')}
           />
         </View>
-
-        <View style={{ flex: 0, borderRadius: 10, marginVertical: 10, padding: 10 }}>
-          <Text style={{
-            fontSize: 25,
-            color: '#525454',
-            fontFamily: 'poppins-semi-bold'
-          }}>Title Here</Text>
-        </View>
-
-        <View style={{ flex: 0, padding: 10, borderRadius: 10 }}>
-          <Text style={{
-            fontSize: 18,
-            color: '#999B9B',
-            fontFamily: 'poppins-regular',
-          }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s,
+        <View
+          style={{
+            flex: 0,
+            backgroundColor: '#E9DBD8',
+            paddingVertical: 10,
+            paddingHorizontal: 10,
+            marginBottom: 10,
+            borderRadius: 10,
+          }}
+        >
+          <Text
+            style={{
+              color: '#877D7B',
+              fontFamily: 'poppins-bold',
+              fontSize: 18,
+            }}
+            numberOfLines={1}
+          >
+            My NFT Card
           </Text>
         </View>
-
+        <View
+          style={{
+            flex: 0,
+            minHeight: 100,
+            maxHeight: 200,
+            backgroundColor: 'white',
+            padding: 5,
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: 'poppins-regular',
+              color: '#877D7B',
+              fontSize: 14
+            }}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          </Text>
+        </View>
       </View>
     </View>
   );
