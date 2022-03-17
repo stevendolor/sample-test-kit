@@ -7,7 +7,7 @@ export default function TabOneScreen() {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#1972e6',
         justifyContent: 'center',
         paddingHorizontal: 20
       }}
@@ -15,14 +15,7 @@ export default function TabOneScreen() {
       <View style={{
         flex: 1,
       }}>
-        <LottieView
-          source={require('../assets/lottie/39476-login-screen.json')}
-          autoPlay={true}
-          loop={true}
-          style={{
-            flex: 1,
-          }}
-        />
+    
       </View>
       <View style={{
         flex: 1,
@@ -79,7 +72,7 @@ export default function TabOneScreen() {
                 fontSize: 18,
                 color: '#fff'
               }}>
-                Submit
+              LOGIN
               </Text>
             </View>
           </View>
@@ -97,7 +90,7 @@ export default function TabOneScreen() {
         <Text style={{
           fontSize: 18
         }}>
-          Create an account?
+          Sign up
         </Text>
       </View>
     </View>
